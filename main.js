@@ -17,7 +17,7 @@ ctx.lineWidth = MOVE_AMOUNT;
 
 // Rainbow Color
 let hue = 0;
-ctx.strokeStyle = `hsl(${Math.random() * 360},100%,50%)`;
+ctx.strokeStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
 
 // Start the drawing
 ctx.beginPath();
@@ -30,9 +30,11 @@ function draw({ key }) {
   // Increment the hue
   hue += 10;
   ctx.strokeStyle = `hsl(${hue},100%,50%)`;
+
   // Start the path
   ctx.beginPath();
   ctx.moveTo(x, y);
+
   // Move our x and y values depending on what the user did
   switch (key) {
     case `ArrowUp`:
@@ -62,6 +64,7 @@ function handleKey(e) {
     draw({ key: e.key });
   }
 }
+
 // Clear/Shake function
 function clearCanvas() {
   canvas.classList.add(`shake`);
@@ -74,6 +77,7 @@ function clearCanvas() {
     { once: true }
   );
 }
+
 // Listen for arrow keys
 window.addEventListener(`keydown`, handleKey);
 shakeButton.addEventListener(`click`, clearCanvas);
