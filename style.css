@@ -8,12 +8,12 @@ body {
   background-size: cover;
 }
 canvas {
-  border: 30px solid #fde200;
+  border: 40px solid #61e846;
   border-radius: 10px;
   /* Set the width and height to half the actual size so it doesn't look pixelated */
   width: 800px;
   height: 500px;
-  background: white;
+  background: #e7e7e7;
 }
 canvas.shake {
   animation: shake 0.5s linear 1;
@@ -36,4 +36,17 @@ canvas.shake {
   60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+
+
+.sexy{
+  color: #fff;
+  background: #0072b9;
+  padding: 1rem;
+  border: 0;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2rem;
+  border-radius: 15px;
 }
